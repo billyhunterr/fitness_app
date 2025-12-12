@@ -42,6 +42,3 @@ Bu proje, **Sakarya Üniversitesi Web Programlama** dersi kapsamında geliştiri
 
 
 
----
-
-*Geliştirici: [Adın Soyadın]*
