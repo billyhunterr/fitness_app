@@ -2,7 +2,7 @@
 
 Bu proje, **Sakarya Üniversitesi Web Programlama** dersi kapsamında geliştirilmiş; kapsamlı bir Spor Salonu Yönetim Sistemi'dir. ASP.NET Core MVC mimarisi kullanılarak tasarlanan uygulama, modern web standartlarına uygun, güvenli ve kullanıcı dostu bir deneyim sunar.
 
-## 🚀 Proje Özellikleri
+##  Proje Özellikleri
 
 ### Kimlik ve Yetkilendirme (Identity)
 * **Rol Bazlı Erişim:** Admin ve Üye (Member) olmak üzere iki farklı rol yapısı.
