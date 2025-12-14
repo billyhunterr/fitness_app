@@ -1,0 +1,26 @@
+using fitness_app.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
+namespace fitness_app.Data
+{
+    // IdentityDbContext'ten miras alıyoruz ki üyelik tabloları da otomatik gelsin
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
+
+       
+
+        public DbSet<GymService> GymServices { get; set; } // Veritabanında 'GymServices' tablosu olacak
+        public DbSet<Trainer> Trainers { get; set; }       // Veritabanında 'Trainers' tablosu olacak
+        public DbSet<Appointment> Appointments { get; set; } // Veritabanında 'Appointments' tablosu olacak
+        public DbSet<UserProgress> UserProgresses { get; set; }
+
+        // Not: Users (Kullanıcılar) tablosunu yazmamıza gerek yok,
+        // çünkü IdentityDbContext bunu bizim için gizli bir şekilde hallediyor.
+    }
+}
+
