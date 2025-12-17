@@ -1,0 +1,28 @@
+using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+
+namespace fitness_app.Models
+{
+    public class GymService
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "Hizmet adı zorunludur.")]
+        [Display(Name = "Hizmet Adı")]
+        public required string Name { get; set; }
+
+        [Display(Name = "Açıklama")]
+        public string? Description { get; set; }
+
+        [Required]
+        [Display(Name = "Süre (Dakika)")]
+        public int DurationMinutes { get; set; }
+
+        [Display(Name = "Ücret")]
+        public decimal Price { get; set; }
+
+        // İlişkiler
+        [ValidateNever] // Bu alanı kontrol etme
+        public ICollection<Trainer>? Trainers { get; set; }
+    }
+}
